@@ -18,7 +18,11 @@ class Game {
   // hides the overlay screen so the user can then see the game
   // gets a random phrase for the game to use
   startGame() {
-    document.getElementById("overlay").style.display = "none";
+    // this helps make sure the buttons on the screen are clear of any css for a new game, so the user doesnt see them changing back
+    setTimeout(function() {
+      document.getElementById("overlay").style.display = "none";
+    }, 250);
+
     this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
   }
