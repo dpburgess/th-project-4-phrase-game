@@ -36,7 +36,11 @@ class Phrase {
     let keys = document.querySelectorAll(`li.${letter}`);
     keys.forEach(key => {
       key.classList.remove("hide");
+      key.classList.add("alter");
       key.classList.add("show");
+      setTimeout(function() {
+        key.classList.remove("alter");
+      }, 1000);
     });
   }
 }

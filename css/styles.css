@@ -121,6 +121,11 @@ button {
   animation-duration: 0.5s;
 }
 
+.alter {
+  transition: transform 0.3s linear;
+  transform: scale(1.5, 1.5);
+}
+
 /* Keyboard */
 
 .keyrow {
